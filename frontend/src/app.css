@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+		font-feature-settings: 'kern' 1;
+	}
+
+	body {
+		@apply font-sf bg-surface-secondary text-label-primary;
+	}
+
+	::selection {
+		background-color: rgba(0, 113, 227, 0.2);
+	}
+}
+
+@layer components {
+	.btn-filled {
+		@apply inline-flex items-center justify-center
+			   h-[50px] px-6 rounded-apple-lg
+			   bg-accent-blue text-white font-semibold text-[17px] tracking-tight
+			   transition-all duration-200 ease-apple
+			   hover:bg-accent-blue-hover active:scale-[0.98]
+			   disabled:bg-fill-primary disabled:text-label-tertiary disabled:cursor-not-allowed disabled:active:scale-100;
+	}
+
+	.btn-gray {
+		@apply inline-flex items-center justify-center
+			   h-[50px] px-6 rounded-apple-lg
+			   bg-fill-secondary text-label-primary font-semibold text-[17px] tracking-tight
+			   transition-all duration-200 ease-apple
+			   hover:bg-fill-primary active:scale-[0.98];
+	}
+
+	.btn-text {
+		@apply text-accent-blue font-normal text-body
+			   transition-opacity duration-150
+			   hover:opacity-70 active:opacity-50;
+	}
+
+	.input-group {
+		@apply flex flex-col gap-2;
+	}
+
+	.input-label {
+		@apply text-footnote text-label-secondary uppercase tracking-wide;
+	}
+
+	.input-select {
+		@apply w-full h-[44px] px-4 rounded-apple-sm
+			   bg-fill-tertiary text-body text-label-primary
+			   border-none outline-none appearance-none cursor-pointer
+			   transition-all duration-150
+			   focus:ring-2 focus:ring-accent-blue/30
+			   disabled:opacity-50 disabled:cursor-not-allowed;
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2386868B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 16px center;
+	}
+
+	.card {
+		@apply bg-surface-primary rounded-apple-xl shadow-card;
+	}
+
+	.separator {
+		@apply h-px bg-separator;
+	}
+
+	.progress-track {
+		@apply w-full h-1 bg-fill-tertiary rounded-full overflow-hidden;
+	}
+
+	.progress-fill {
+		@apply h-full bg-accent-blue rounded-full transition-all duration-300 ease-apple;
+	}
+
+	.icon-circle {
+		@apply flex items-center justify-center rounded-full;
+	}
+}
