@@ -4,7 +4,6 @@ A Web UI for translating EPUB files using local Ollama models. Keep your privacy
 
 ![Screenshot](screenshot.jpg)
 
-
 ## Features
 
 - **Multi-language Translation**: Support for 10+ languages including English, Korean, Japanese, and Chinese
@@ -18,22 +17,25 @@ A Web UI for translating EPUB files using local Ollama models. Keep your privacy
 - Python 3.11+
 - Node.js 18+
 - Ollama (installed and running locally)
-- Translation model: `ollama pull translategemma:4b` (recommended)
+- Translation model: `translategemma:4b` (recommended)
 - uv (Python package manager)
 
 ## Installation
 
+### Ollama setup
+
 ```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
 
-# Install backend dependencies
-cd backend
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+# Install translation model in local
+ollama pull translategemma:4b
+```
 
-# Install frontend dependencies
-cd ../frontend
-npm install
+### Epub Translator
+
+```bash
+bash ./install.sh
 ```
 
 ## Running
