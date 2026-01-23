@@ -17,10 +17,22 @@ A Web UI for translating EPUB files using local Ollama models. Keep your privacy
 - Python 3.11+
 - Node.js 18+
 - Ollama (installed and running locally)
-- Translation model: `ollama pull translategemma:4b` (recommended)
+- Translation model: `translategemma:4b` (recommended)
 - uv (Python package manager)
 
 ## Installation
+
+### Ollama setup
+
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Install translation model in local
+ollama pull translategemma:4b
+```
+
+### Epub Translator
 
 ```bash
 bash ./install.sh
