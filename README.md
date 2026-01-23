@@ -4,7 +4,6 @@ A Web UI for translating EPUB files using local Ollama models. Keep your privacy
 
 ![Screenshot](screenshot.jpg)
 
-
 ## Features
 
 - **Multi-language Translation**: Support for 10+ languages including English, Korean, Japanese, and Chinese
@@ -24,16 +23,7 @@ A Web UI for translating EPUB files using local Ollama models. Keep your privacy
 ## Installation
 
 ```bash
-
-# Install backend dependencies
-cd backend
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
-
-# Install frontend dependencies
-cd ../frontend
-npm install
+bash ./install.sh
 ```
 
 ## Running
